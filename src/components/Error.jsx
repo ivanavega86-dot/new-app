@@ -12,7 +12,7 @@ const error = () => {
             }}>
              <img src= {"https://i.postimg.cc/KYnWxfHB/No-Found-1024x1024.jpg"} alt={'Error'}/>
 
-             <Link  className="btn btn-dark" to="/">Volver a Home</Link>
+             <Link  className="btn btn-dark" to="/">Volver a Inicio</Link>
             </div>
   )
 }

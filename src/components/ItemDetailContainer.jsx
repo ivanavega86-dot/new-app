@@ -10,7 +10,7 @@ const ItemDetailConteiner = () => {
 
 
     useEffect (()=>{
-        getItem("02")
+        getItem(id)
         .then((res)=>setDetalle(res))
         .catch((error)=> console.log(error))
         

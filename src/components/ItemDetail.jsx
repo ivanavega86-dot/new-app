@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button"
+import ItemCount from "./ItemCount";
 
 
 const ItemDetail =({detalle}) => {
@@ -16,7 +16,7 @@ const ItemDetail =({detalle}) => {
           <p>{detalle.description}</p>
           <p>${detalle.price},00</p>
           <p>Stock disponible:{detalle.stock}Unidades</p>
-          <Button/>
+        <ItemCount/>
         </div>
     )
 }

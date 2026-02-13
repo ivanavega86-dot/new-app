@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom"
 
 
 const ItemListContainer = (props)=> {
-    const {mensaje} = props
+    const {Mensaje} = props
     const [data, setData] = useState([]) 
     const {type}= useParams()
     useEffect(()=>{
@@ -15,8 +15,9 @@ const ItemListContainer = (props)=> {
         .then((res)=>{
             if(type){
                 //filtro
+                setData(res.filter((prod)=> prod.category === type))
                }else {
-                setData(res.filter((prod)=> prod.category===type))
+                setData(res)
             }
         } )
 
@@ -24,7 +25,7 @@ const ItemListContainer = (props)=> {
     },[type])
     return (
         <div>
-<h1>{mensaje}</h1>
+<h1>{Mensaje}{type && <span style={{textTransform:"capitalize"}}>{type}</span>}</h1>
 {/* {data.map((prod)=> <p key={prod.id}>{prod.name}</p>)} */}
 <ItemList data = {data}/>
         </div>

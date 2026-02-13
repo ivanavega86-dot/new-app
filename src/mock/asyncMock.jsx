@@ -2,7 +2,7 @@ const productos = [
     {
         id:"01",
         name:"Teclado",
-        description:"",
+        description:"Teclado con luces led, y cable",
         stock: 20,
         price:20000,
         category:"mas vendidos",
@@ -12,17 +12,17 @@ const productos = [
      {
         id:"02",
         name:"Mouse",
-        description:"",
+        description:"Mouse con rgb y cable",
         stock: 15,
         price:13000,
-        category:"Nuevos",
+        category:"nuevos",
         img:"https://i.postimg.cc/qMkSG3DH/10.png"
 
     },
      {
         id:"03",
         name:"Auriculares",
-        description:"",
+        description:"Auriculares con cable y rgb",
         stock: 10,
         price:10000,
         category:"mas vendidos",
@@ -32,10 +32,10 @@ const productos = [
      {
         id:"04",
         name:"Teclado Inalambrico",
-        description:"",
+        description:"Teclado inalambrico con bateria y rgb",
         stock: 20,
         price:25000,
-        category:"mas vendidos",
+        category:"ofertas",
         img:"https://i.postimg.cc/1g8xzbjz/Chat-GPT-Image-5-feb-2026-15-35-57.png"
 
     }

@@ -11,7 +11,7 @@ const Item = ({prod}) => {
         <Card.Text>
          ${prod.price},00
         </Card.Text>
-        <Link className='btn btn-dark' to={"/item/" + prod.id}>Ver Mas</Link>
+        <Link className='btn btn-dark' to={"/item/"+prod.id}>Ver Mas</Link>
       </Card.Body>
     </Card>
   )

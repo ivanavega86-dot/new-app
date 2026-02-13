@@ -24,7 +24,7 @@ function NavBarBS() {
                 Ofertas
                 <NavDropdown.Divider />
               </NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to="/category/masvendidos">Mas Vendidos</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/category/mas vendidos">Mas Vendidos</NavDropdown.Item>
               <NavDropdown.Divider />
               
             </NavDropdown>
