@@ -3,14 +3,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { NavLink } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 function NavBarBS() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand as={NavLink} to="/"> 
-          <img src="../logo.png.png" alt="logo" style={{width:"7rem"}}/>
+          <img src="../logo.png" alt="logo" style={{width:"6rem"}}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
