@@ -44,13 +44,13 @@ export const CartProvider = ({children})=> {
         return cart.some((prod)=> prod.id === id)
      }
      //cantidad total 
-     const cartQty =()=>{
+     /* const cartQty =()=>{ */
 
-     }
+    
      //totaL A PAGAR
-     const total =()=>{
+     /* const total =()=>{
         
-     }
+     } */
      const itemQuantity =(id) =>{
         const inCart = cart.find((prod) => prod.id === id)
         if(inCart){
