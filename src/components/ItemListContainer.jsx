@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
-import { getProducts } from "../mock/asyncMock"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
 import Loader from "./Loader"
+import { db } from "../service/firebase"
+import { collection, getDocs, query, where } from "firebase/firestore"
+
 
 
 
@@ -12,19 +14,25 @@ const ItemListContainer = (props)=> {
     const [data, setData] = useState([]) 
     const [loading, setLoading] = useState(false)
     const {type}= useParams()
+    //FIREBASE
     useEffect(()=>{
+      //conectarnos a nuestra coleccion
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setLoading(true)
-        getProducts()
-        .then((res)=>{
-            if(type){
-                //filtro
-                setData(res.filter((prod)=> prod.category === type))
-               }else {
-                setData(res)
-            }
-        } )
-
-        .catch ((error)=> console.log(error, "error"))
+    //pedir docs
+     const prodColl = type ? query(collection(db,"productos"),where("category","==", type)):  collection(db,"productos")
+     getDocs(prodColl)
+     .then((res)=>{
+        //limpiar data 
+       const list = res.docs.map((doc)=>{
+        return {
+            id: doc.id,
+            ...doc.data()
+        }
+       })
+        setData(list)
+     })
+        .catch ((error)=> console.log(error))
         .finally(()=>setLoading(false))
     },[type])
     return (

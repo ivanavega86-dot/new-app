@@ -1,10 +1,15 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 //defini contexto
 
-export const CartContext = createContext();
+ // eslint-disable-next-line react-refresh/only-export-components
+ export const CartContext = createContext(); 
+ const carritoLS = JSON.parse(localStorage.getItem('carrito')) || []
 //declaro el proveedor
 export const CartProvider = ({children})=> {
-    const [cart, setCart] = useState ([])
+    const [cart, setCart] = useState ([carritoLS])
+    useEffect(()=>{
+        localStorage.setItem('carrito', JSON.stringify(cart))
+    },[cart])
 
 
     //agregar un item al carrito contemplar repetidos
@@ -44,13 +49,14 @@ export const CartProvider = ({children})=> {
         return cart.some((prod)=> prod.id === id)
      }
      //cantidad total 
-     /* const cartQty =()=>{ */
-
+     const cartQty =()=>{
+        return cart.reduce((acc, prod) => acc += prod.quantity, 0)
+     }
     
      //totaL A PAGAR
-     /* const total =()=>{
-        
-     } */
+     const total =()=>{
+        return cart.reduce((acc, prod)=> acc += (prod.quantity), 0)
+     }
      const itemQuantity =(id) =>{
         const inCart = cart.find((prod) => prod.id === id)
         if(inCart){
@@ -61,7 +67,7 @@ export const CartProvider = ({children})=> {
      }
 //las herramientas (funciones)
     return(
-        <CartContext.Provider value={{cart, addItem, clear, removeItem, itemQuantity }}>
+        <CartContext.Provider value={{cart, addItem, clear, removeItem, itemQuantity, total, cartQty}}>
            {children}
         </CartContext.Provider>
     )
