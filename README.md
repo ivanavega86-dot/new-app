@@ -1,16 +1,24 @@
-# React + Vite
+# Pixel Wave App 
+Este proyecto fue realizado para aprender las bases de react con js en coderhouse.
+![app] (/public/App.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+### Instalacion 
+1. Clonar repositorio 
+2. Muevase a la carpeta creada con el comando codigo "cd desarrollo web/react/new-app"
+3. Ejecute el comando "npm install" para instalar dependencias y crear la carpeta "node_modules"
+4. Ejecute el comando "npm run dev" para instalar la app en un entorno local.
+Es necesario contar con Node v22.11.0 instalado 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+### Version host 
+Si desea ver el proyecto online, puede ingresar al siguiente link: [new-app]()
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Librerias utilizadas 
+- [React Bootstrap](https://react-bootstrap.netlify.app/) Utilizada para el stylo de la app
+- [React Icons](https://react-icons.github.io/react-icons/) Utilizada para los Iconos 
+-[React rooter Dom](https://reactrouter.com/) Utilizada para la navegacion de la App
+-[Firebase](https://firebase.google.com/) configurada para base de datos.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Desarrolado por Ivana Vega 🧸 
