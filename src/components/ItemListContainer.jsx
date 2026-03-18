@@ -1,9 +1,11 @@
+
 import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
 import Loader from "./Loader"
 import { db } from "../service/firebase"
 import { collection, getDocs, query, where } from "firebase/firestore"
+
 
 
 
@@ -35,8 +37,10 @@ const ItemListContainer = (props)=> {
         .catch ((error)=> console.log(error))
         .finally(()=>setLoading(false))
     },[type])
+ 
     return (
         <>
+    
         {
             loading
             ? <Loader text = {type ?"Cargando categoria" : "Cargando productos"}/>
