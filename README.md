@@ -12,7 +12,7 @@ Es necesario contar con Node v22.11.0 instalado
 
 
 ### Version host 
-Si desea ver el proyecto online, puede ingresar al siguiente link: [new-app]()
+Si desea ver el proyecto online, puede ingresar al siguiente link: [new-app](https://new-app-phi-five.vercel.app/)
 
 ### Librerias utilizadas 
 - [React Bootstrap](https://react-bootstrap.netlify.app/) Utilizada para el stylo de la app
