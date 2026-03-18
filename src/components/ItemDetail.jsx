@@ -3,6 +3,7 @@ import ItemCount from "./ItemCount";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const ItemDetail =({detalle}) => {
@@ -10,9 +11,18 @@ const ItemDetail =({detalle}) => {
     const {cart,addItem, itemQuantity} = useContext(CartContext)
     console.log(cart)
     const onAdd = (cantidad) => {
-       /*  console.log(`Agregas al carrito ${cantidad} unidades de ${detalle.name}`); */
+    
+
         addItem(detalle, cantidad)
         setPurchase(true)
+        Swal.fire({
+            position:"top-end",
+            icon:"success",
+            title:`Agregaste ${detalle.name} al carrito`,
+            showCancelButton: false,
+            showConfirmButton:false,
+            time:1000,
+        })
     }
     const stockActualizado= detalle.stock - itemQuantity(detalle.id)
     return (
