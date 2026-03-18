@@ -1,6 +1,6 @@
 # Pixel Wave App 
 Este proyecto fue realizado para aprender las bases de react con js en coderhouse.
-![app] (/public/App.png)
+![app](/public/App.png)
 
 
 ### Instalacion 
